@@ -1,0 +1,38 @@
+{
+  "name": "@higuaifan/rollup-plugin-fontmin",
+  "version": "0.0.1",
+  "description": "A rollup plugin to minify font",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
+    "start": "rollup --config src/rollup.config.ts --configPlugin @rollup/plugin-typescript"
+  },
+  "files": [
+    "dist",
+    "types"
+  ],
+  "types": "types/rollup-plugin-fontmin.d.ts",
+  "keywords": [
+    "minify",
+    "font"
+  ],
+  "author": "higuaifan",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^8.3.1",
+    "@types/node": "^17.0.23",
+    "rollup": "^2.70.1",
+    "tslib": "^2.3.1",
+    "typescript": "^4.6.2"
+  },
+  "dependencies": {
+    "fontmin": "^0.9.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/higuaifan/rollup-plugin-fontmin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/higuaifan/rollup-plugin-fontmin/issues"
+  }
+}
