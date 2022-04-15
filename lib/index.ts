@@ -27,3 +27,5 @@ export default function RollupPluginFontmin(pluginOption?: Partial<OptionType>) 
     }
   }
 }
+
+export { getCodes };

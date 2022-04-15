@@ -19,5 +19,6 @@ export type CodeScanOptionType = {
   baseUrl: string
 }
 
-declare function RollupPluginFontmin(pluginOption?: Partial<OptionType>): Plugin;
-export default RollupPluginFontmin;
+export default function RollupPluginFontmin(pluginOption?: Partial<OptionType>): Plugin;
+
+export declare function getCodes(options?: Partial<CodeScanOptionType>): Promise<string>
