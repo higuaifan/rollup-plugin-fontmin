@@ -6,16 +6,16 @@
  *
  * 公司的业务千篇一律，复杂的代码好几百行。
  */
-import RollupPluginFontmin  from "../lib";
+import RollupPluginFontmin from "../lib";
 import typescript from "@rollup/plugin-typescript";
 
 export default ({
   input: 'src/main.ts',
   plugins: [typescript(), RollupPluginFontmin({
-    fontSrc:'./src/font/*.*',
-    fontDest:'./output/font',
-    fileExt: ['.ts'],
-    baseUrl: './src',
+    fontSrc: './src/font/*.*',
+    fontDest: './output/font',
+    fileExt: ['ts'],
+    include: 'src/**/*',
   })],
   output: [{
     file: 'output/bundle.js',
