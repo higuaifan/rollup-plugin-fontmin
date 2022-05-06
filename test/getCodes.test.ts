@@ -20,6 +20,22 @@ describe('test getCodes', () => {
       "
        !\\"#'()*,-./012568:;<=>@CDEFHLMOPTUYabcdefghiklmnoprstuvwxy{}。一业代件你几务千复好律怪文是杂江测湖百的码篇行试这阿面页，"
     `);
+  });
+
+  test('without options', async () => {
+    const res = await getCodes();
+    expect(res.split('').sort().join('')).toMatchInlineSnapshot(`
+      "
+       \\"'()*,-./012345:;=@ADEFMPRSV[]abcdefghijlmnoprstuvxy{}。一业代你公几凡务千司复好律怪杂百的码篇行阿，"
+    `);
+  })
+
+  test('without empty include', async () => {
+    const res = await getCodes({ include: undefined });
+    expect(res.split('').sort().join('')).toMatchInlineSnapshot(`
+      "
+       \\"'()*,-./012345:;=@ADEFMPRSV[]abcdefghijlmnoprstuvxy{}。一业代你公几凡务千司复好律怪杂百的码篇行阿，"
+    `);
   })
 
 

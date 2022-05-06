@@ -65,6 +65,19 @@ describe('test fileScanner', () => {
     `);
   });
 
+  test('set two ext', async () => {
+    const res = await fileScanner({
+      include: 'test/example/**/*',
+      fileExt: ['ts', 'vue']
+    });
+    expect(res).toMatchInlineSnapshot(`
+      [
+        "test/example/demo.ts",
+        "test/example/src/DemoVue.vue",
+      ]
+    `);
+  });
+
   test('exclude folder', async () => {
     const res = await fileScanner({
       include: 'test/example/**/*',
