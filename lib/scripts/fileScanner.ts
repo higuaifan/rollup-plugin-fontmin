@@ -8,7 +8,7 @@
  */
 import FastGlob from "fast-glob";
 import type { CodeScanOptionType } from "../../types/rollup-plugin-fontmin";
-
+import path from 'path';
 
 const FILE_EXT = ['ts', 'js', 'tsx', 'jsx', 'vue', 'scss', 'sass', 'html', 'json'];
 
@@ -21,7 +21,12 @@ const toStringArray = (str: string | string[]): string[] => {
 
 const toFixExt = (fileUrls: string | string[], fileExt: string) => {
   return toStringArray(fileUrls).map(i => {
-    if (i.includes('.')) {
+    const infos = i.split(path.sep);
+    const endInfo = infos[infos.length - 1];
+    if (endInfo.includes('.')) {
+      return i;
+    }
+    if (endInfo === '**') {
       return i;
     }
     return `${i}.${fileExt}`;
@@ -51,5 +56,5 @@ export const fileScanner = async (options: CodeScanOptionType) => {
   const fileExt = getFileExt(options.fileExt);
   const includes = toFixExt(options.include, fileExt);
   const excludes = options.exclude ? toFixExt(options.exclude, fileExt) : [];
-  return await FastGlob(includes, { ignore: excludes });
+  return await FastGlob(includes, { ignore: excludes, dot: true });
 }

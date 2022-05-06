@@ -18,7 +18,7 @@ describe('test getCodes', () => {
     });
     expect(res.split('').sort().join('')).toMatchInlineSnapshot(`
       "
-       '()*,./012568:;@acdefghilmnoprstuvwy{}。一业代件你几务千复好律怪文是杂江湖百的码篇行这阿，"
+       !\\"#'()*,-./012568:;<=>@CDEFHLMOPTUYabcdefghiklmnoprstuvwxy{}。一业代件你几务千复好律怪文是杂江测湖百的码篇行试这阿面页，"
     `);
   })
 

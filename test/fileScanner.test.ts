@@ -19,6 +19,7 @@ describe('test fileScanner', () => {
       [
         "test/example/demo.scss",
         "test/example/demo.ts",
+        "test/example/.output/demo.html",
         "test/example/src/DemoVue.vue",
       ]
     `);
@@ -33,6 +34,7 @@ describe('test fileScanner', () => {
       [
         "test/example/demo.scss",
         "test/example/demo.ts",
+        "test/example/.output/demo.html",
         "test/example/doc/demo.md",
         "test/example/src/DemoVue.vue",
       ]
@@ -72,6 +74,7 @@ describe('test fileScanner', () => {
       [
         "test/example/demo.scss",
         "test/example/demo.ts",
+        "test/example/.output/demo.html",
       ]
     `);
   });
@@ -85,6 +88,7 @@ describe('test fileScanner', () => {
       [
         "test/example/demo.scss",
         "test/example/demo.ts",
+        "test/example/.output/demo.html",
       ]
     `);
   });
