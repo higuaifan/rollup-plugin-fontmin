@@ -10,15 +10,18 @@
 import { Plugin } from "rollup";
 
 export type OptionType = {
-  fontSrc: string,
-  fontDest: string,
+  fontSrc?: string,
+  fontDest?: string,
 } & CodeScanOptionType
 
 export type CodeScanOptionType = {
-  fileExt: string[],
-  baseUrl: string
+  include: string | string[],
+  fileExt?: string | string[],
+  exclude?: string | string[],
 }
 
-export default function RollupPluginFontmin(pluginOption?: Partial<OptionType>): Plugin;
+export default function RollupPluginFontmin(pluginOption?: OptionType): Plugin;
 
-export declare function getCodes(options?: Partial<CodeScanOptionType>): Promise<string>
+export declare function getCodes(options?: CodeScanOptionType): Promise<string>;
+
+export declare function fileScanAndFontmin(pluginOption?: OptionType): void;
