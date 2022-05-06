@@ -14,20 +14,26 @@ const BASE_DIST = './dist/font';
 const Fontmin = require('fontmin');
 
 const fileScanAndFontmin = async (pluginOption?: OptionType) => {
-  getCodes(pluginOption).then(text => {
+  return new Promise(async (resolve, reject) => {
+    const text = await getCodes(pluginOption);
     new Fontmin()
       .src(pluginOption && pluginOption.fontSrc ? pluginOption.fontSrc : BASE_SRC)
       .use(Fontmin.glyph({ text }))
       .dest(pluginOption && pluginOption.fontDest ? pluginOption.fontDest : BASE_DIST)
-      .run();
-  });
+      .run((err: any, files: any) => {
+        if (err) {
+          reject(err);
+        }
+        resolve(files);
+      })
+  })
 }
 
 export default function RollupPluginFontmin(pluginOption?: OptionType) {
   return {
     name: 'rollup-plugin-fontmin',
-    writeBundle: () => {
-      fileScanAndFontmin(pluginOption);
+    writeBundle: async () => {
+      await fileScanAndFontmin(pluginOption);
     }
   }
 }
