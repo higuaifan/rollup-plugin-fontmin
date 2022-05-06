@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
-    "start": "rollup --config src/rollup.config.ts --configPlugin @rollup/plugin-typescript"
+    "start": "rollup --config src/rollup.config.ts --configPlugin @rollup/plugin-typescript",
+    "test": "vitest -u"
   },
   "files": [
     "dist",
@@ -24,7 +25,8 @@
     "fast-glob": "^3.2.11",
     "rollup": "^2.70.1",
     "tslib": "^2.3.1",
-    "typescript": "^4.6.2"
+    "typescript": "^4.6.2",
+    "vitest": "^0.10.4"
   },
   "dependencies": {
     "fontmin": "^0.9.9"
