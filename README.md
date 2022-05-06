@@ -18,17 +18,16 @@ A rollup plugin to minify font. based on [Fontmin](https://github.com/ecomfe/fon
 
 ## API
 
-| key      | type     | description                                   | default                                                                  |
-|----------|----------|-----------------------------------------------|--------------------------------------------------------------------------|
-| fontSrc  | string   | needs minify fonts file src                   | './public/font/\*.*'                                                     |
-| fontDest | string   | minified fonts output file src                | './dist/font'                                                            |
-| fileExt  | string[] | scan files extension list, must with code '.' | '.ts', '.js', '.tsx', '.jsx', '.vue', '.scss', '.sass', '.html', '.json' |
-| baseUrl  | string   | scan files/document url                       | './src'                                                                  |
+| key      | type               | description                                                                     | default                                                         |
+|----------|--------------------|---------------------------------------------------------------------------------|-----------------------------------------------------------------|
+| fontSrc  | string             | needs minify fonts file src                                                     | './public/font/\*.*'                                            |
+| fontDest | string             | minified fonts output file src                                                  | './dist/font'                                                   |
+| include  | string[] or string | scan folders or files based on [fast-glob](https://github.com/mrmlnc/fast-glob) | 'src/**/*'                                                      |
+| fileExt  | string[] or string | scan files extension list                                                       | 'ts', 'js', 'tsx', 'jsx', 'vue', 'scss', 'sass', 'html', 'json' |
+| exclude  | string[] or string | exclude folders or files                                                        | ''                                                              |
 
 ## TODO
 
 - [ ] ignore annotate
 - [ ] support all Fontmin api
-- [ ] fontExt filter smarter(like without code '.')
-- [ ] support file ignore
 - [ ] make code strong
