@@ -54,7 +54,7 @@ const getFileExt = (fileExt?: string | string[]): string => {
  */
 export const fileScanner = async (options: CodeScanOptionType) => {
   const fileExt = getFileExt(options.fileExt);
-  const includes = toFixExt(options.include, fileExt);
+  const includes = toFixExt(options.include!, fileExt);
   const excludes = options.exclude ? toFixExt(options.exclude, fileExt) : [];
   return await FastGlob(includes, { ignore: excludes, dot: true });
 }

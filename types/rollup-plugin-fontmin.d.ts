@@ -15,7 +15,7 @@ export type OptionType = {
 } & CodeScanOptionType
 
 export type CodeScanOptionType = {
-  include: string | string[],
+  include?: string | string[],
   fileExt?: string | string[],
   exclude?: string | string[],
 }

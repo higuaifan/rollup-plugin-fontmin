@@ -17,6 +17,12 @@ const BASE_URL = 'src/**/*';
 export const getCodes = async (options?: CodeScanOptionType) => {
   const codeSet = new Set<string>();
 
+  if (!options) {
+    options = { include: BASE_URL };
+  }
+  if (!options.include) {
+    options.include = BASE_URL;
+  }
 
   const getFileCodeSet: (newFilePath: string) => Promise<Set<string>> = newFilePath => {
     return new Promise((resolve) => {
@@ -27,7 +33,7 @@ export const getCodes = async (options?: CodeScanOptionType) => {
   }
 
   const setCodeSet = async () => {
-    const files = await fileScanner(options ?? { include: BASE_URL });
+    const files = await fileScanner(options!);
     const setters = files.map(filePath => new Promise(async (resolve) => {
       const newSet = await getFileCodeSet(filePath);
       newSet.forEach(c => {
