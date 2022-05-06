@@ -1,5 +1,8 @@
 # rollup-plugin-fontmin
 
+![npm](https://img.shields.io/npm/v/@higuaifan/rollup-plugin-fontmin?color=%23c50315&style=flat-square)
+[![codecov](https://codecov.io/gh/higuaifan/rollup-plugin-fontmin/branch/master/graph/badge.svg?token=41338I1T1D)](https://codecov.io/gh/higuaifan/rollup-plugin-fontmin)
+
 A rollup plugin to minify font. based on [Fontmin](https://github.com/ecomfe/fontmin).
 
 ## QUICK START
