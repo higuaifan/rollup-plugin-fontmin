@@ -13,10 +13,29 @@ A rollup plugin to minify font. based on [Fontmin](https://github.com/ecomfe/fon
 
 ### usage
 
-```ts
+#### vite
+
+```typescript
 {
-  plugins:[RollupPluginFontmin()]
+  plugins:[ RollupPluginFontmin() ]
 }
+```
+
+#### nuxt 
+
+```typescript
+import { defineNuxtModule } from "@nuxt/kit";
+import { fileScanAndFontmin } from '@higuaifan/rollup-plugin-fontmin';
+
+export default defineNuxtModule({
+  async setup(options, nuxt) {
+    nuxt.hook('close', async () => {
+      await fileScanAndFontmin({});
+    });
+  }
+
+})
+
 ```
 
 ## API
