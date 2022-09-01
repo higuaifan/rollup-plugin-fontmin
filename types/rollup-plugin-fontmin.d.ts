@@ -20,7 +20,7 @@ export type CodeScanOptionType = {
   exclude?: string | string[],
 }
 
-export default function RollupPluginFontmin(pluginOption?: OptionType): Plugin;
+export declare function RollupPluginFontmin(pluginOption?: OptionType): Plugin;
 
 export declare function getCodes(options?: CodeScanOptionType): Promise<string>;
 

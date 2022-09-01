@@ -29,7 +29,7 @@ const fileScanAndFontmin = async (pluginOption?: OptionType) => {
   })
 }
 
-export default function RollupPluginFontmin(pluginOption?: OptionType) {
+const RollupPluginFontmin = (pluginOption?: OptionType) => {
   return {
     name: 'rollup-plugin-fontmin',
     writeBundle: async () => {
@@ -38,4 +38,4 @@ export default function RollupPluginFontmin(pluginOption?: OptionType) {
   }
 }
 
-export { fileScanAndFontmin, getCodes };
+export { RollupPluginFontmin, fileScanAndFontmin, getCodes };
