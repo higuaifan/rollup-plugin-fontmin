@@ -17,8 +17,15 @@ A rollup plugin to minify font. based on [Fontmin](https://github.com/ecomfe/fon
 
 ```typescript
 import { RollupPluginFontmin } from '@higuaifan/rollup-plugin-fontmin';
+// config
 {
-  plugins:[ RollupPluginFontmin() ]
+  build:{
+    rollupOptions:{
+      plugins:[
+        RollupPluginFontmin()
+      ]
+    }
+  }
 }
 ```
 
