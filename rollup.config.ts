@@ -6,7 +6,7 @@
  *
  * 公司的业务千篇一律，复杂的代码好几百行。
  */
-import typescript from "@rollup/plugin-typescript";
+import typescript from '@rollup/plugin-typescript';
 
 export default ({
   input: 'lib/index.ts',
@@ -14,5 +14,6 @@ export default ({
   output: [{
     file: 'dist/index.js',
     format: 'cjs'
-  }]
+  }],
+  external: ['fs', 'fast-glob', 'path']
 });
