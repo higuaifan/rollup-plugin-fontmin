@@ -1,6 +1,6 @@
 {
   "name": "@higuaifan/rollup-plugin-fontmin",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A rollup plugin to minify font",
   "main": "dist/index.js",
   "scripts": {
