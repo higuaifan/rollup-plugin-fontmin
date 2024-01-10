@@ -12,6 +12,7 @@ import { Plugin } from "rollup";
 export type OptionType = {
   fontSrc?: string,
   fontDest?: string,
+  text?: string,
 } & CodeScanOptionType
 
 export type CodeScanOptionType = {
