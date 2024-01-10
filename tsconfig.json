@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "module": "node12",
+    "module": "esnext",
     "moduleResolution": "node",
     "esModuleInterop": true,
     "strict": true,
@@ -22,6 +22,7 @@
     "src/**/*.d.ts",
     "lib/**/*.ts",
     "lib/**/*.d.ts",
-    "types/*.d.ts"
+    "types/*.d.ts",
+    "rollup.config.ts"
   ]
 }
