@@ -26,7 +26,7 @@ describe('test getCodes', () => {
     const res = await getCodes();
     expect(res.split('').sort().join('')).toMatchInlineSnapshot(`
       "
-       '()*,-./012345:;=@ADEFMPRSVW[]abcdefghijlmnoprstuvxy{}。一业他代你公其几凡务千司复好律怪文本杂百的码篇行阿，"
+       '()*,-./012345:;=@ACDEFMPRSV[]abcdefghijlmnoprstuvxy{}。一业他代你公其几凡务千司复好律怪文本杂百的码篇行阿，"
     `);
   })
 
@@ -34,7 +34,7 @@ describe('test getCodes', () => {
     const res = await getCodes({ include: undefined });
     expect(res.split('').sort().join('')).toMatchInlineSnapshot(`
       "
-       '()*,-./012345:;=@ADEFMPRSVW[]abcdefghijlmnoprstuvxy{}。一业他代你公其几凡务千司复好律怪文本杂百的码篇行阿，"
+       '()*,-./012345:;=@ACDEFMPRSV[]abcdefghijlmnoprstuvxy{}。一业他代你公其几凡务千司复好律怪文本杂百的码篇行阿，"
     `);
   })
 
