@@ -18,7 +18,7 @@ describe('test getCodes', () => {
     });
     expect(res.split('').sort().join('')).toMatchInlineSnapshot(`
       "
-       !\\"#'()*,-./012568:;<=>@CDEFHLMOPTUYabcdefghiklmnoprstuvwxy{}。一业代件你几务千复好律怪文是杂江测湖百的码篇行试这阿面页，"
+       !"#'()*,-./012568:;<=>@CDEFHLMOPTUYabcdefghiklmnoprstuvwxy{}。一业代件你几务千复好律怪文是杂江测湖百的码篇行试这阿面页，"
     `);
   });
 
@@ -26,7 +26,7 @@ describe('test getCodes', () => {
     const res = await getCodes();
     expect(res.split('').sort().join('')).toMatchInlineSnapshot(`
       "
-       \\"'()*,-./012345:;=@ADEFMPRSV[]abcdefghijlmnoprstuvxy{}。一业代你公几凡务千司复好律怪杂百的码篇行阿，"
+       '()*,-./012345:;=@ADEFMPRSVW[]abcdefghijlmnoprstuvxy{}。一业他代你公其几凡务千司复好律怪文本杂百的码篇行阿，"
     `);
   })
 
@@ -34,7 +34,7 @@ describe('test getCodes', () => {
     const res = await getCodes({ include: undefined });
     expect(res.split('').sort().join('')).toMatchInlineSnapshot(`
       "
-       \\"'()*,-./012345:;=@ADEFMPRSV[]abcdefghijlmnoprstuvxy{}。一业代你公几凡务千司复好律怪杂百的码篇行阿，"
+       '()*,-./012345:;=@ADEFMPRSVW[]abcdefghijlmnoprstuvxy{}。一业他代你公其几凡务千司复好律怪文本杂百的码篇行阿，"
     `);
   })
 
